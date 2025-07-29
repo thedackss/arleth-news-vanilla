@@ -155,6 +155,605 @@ body {
             color: rgba(0, 0, 0, 0.7);
         }
     }
+
+    // Page headers
+    .page-header {
+        background: linear-gradient(135deg, var(--primary-color), #c0392b);
+        color: white;
+        padding: 4rem 1rem 2rem;
+        text-align: center;
+        
+        &.tech-header {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+        
+        &.sports-header {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+        
+        &.politics-header {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+        
+        .header-content {
+            max-width: 80rem;
+            margin: 0 auto;
+            
+            h1 {
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+            
+            p {
+                font-size: 1.2rem;
+                opacity: 0.9;
+            }
+        }
+    }
+
+    // Main content layout
+    .main-content {
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    // News grid for homepage
+    .featured-news {
+        margin-top: 2rem;
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+    }
+
+    // News cards
+    .news-card, .article-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        &.featured {
+            grid-column: span 2;
+            
+            @media (max-width: 768px) {
+                grid-column: span 1;
+            }
+            
+            .news-content, .article-content {
+                padding: 2rem;
+                
+                h3, h2 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .news-content, .article-content {
+            padding: 1.5rem;
+            
+            .category {
+                display: inline-block;
+                background: var(--primary-color);
+                color: white;
+                padding: 0.25rem 0.75rem;
+                border-radius: 20px;
+                font-size: 0.8rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+            }
+            
+            h3, h2 {
+                font-size: 1.2rem;
+                font-weight: 700;
+                margin-bottom: 0.75rem;
+                color: var(--text-color);
+                line-height: 1.4;
+            }
+            
+            p {
+                color: #666;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+            }
+            
+            .news-meta, .article-meta {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 0.85rem;
+                color: #888;
+                
+                .date {
+                    font-weight: 500;
+                }
+                
+                .author {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    // Sidebar styles
+    .sidebar {
+        .sidebar-section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            
+            h3, h4 {
+                color: var(--text-color);
+                margin-bottom: 1rem;
+                font-weight: 700;
+            }
+            
+            .trending-list {
+                list-style: none;
+                
+                li {
+                    padding: 0.75rem 0;
+                    border-bottom: 1px solid #eee;
+                    
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                    
+                    a {
+                        color: var(--text-color);
+                        text-decoration: none;
+                        font-size: 0.9rem;
+                        line-height: 1.4;
+                        
+                        &:hover {
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Market data styles
+    .market-data {
+        .market-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+            
+            &:last-child {
+                border-bottom: none;
+            }
+            
+            .market-name {
+                font-weight: 600;
+                color: var(--text-color);
+            }
+            
+            .market-value {
+                font-weight: 700;
+                
+                &.positive {
+                    color: #27ae60;
+                }
+                
+                &.negative {
+                    color: #e74c3c;
+                }
+            }
+        }
+    }
+
+    // Startup and events styles
+    .startup-list, .events-list {
+        .startup-item, .event-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        
+        .startup-item {
+            h4 {
+                color: var(--text-color);
+                margin-bottom: 0.25rem;
+            }
+            
+            p {
+                color: #666;
+                font-size: 0.9rem;
+                margin-bottom: 0.25rem;
+            }
+            
+            .funding {
+                color: var(--primary-color);
+                font-weight: 600;
+                font-size: 0.85rem;
+            }
+        }
+        
+        .event-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            
+            .event-date {
+                background: var(--primary-color);
+                color: white;
+                padding: 0.5rem;
+                border-radius: 8px;
+                font-weight: 600;
+                font-size: 0.8rem;
+                text-align: center;
+                min-width: 50px;
+            }
+            
+            .event-info {
+                h4 {
+                    color: var(--text-color);
+                    margin-bottom: 0.25rem;
+                    font-size: 0.95rem;
+                }
+                
+                p {
+                    color: #666;
+                    font-size: 0.85rem;
+                }
+            }
+        }
+    }
+
+    // Sports specific styles
+    .live-scores {
+        .match-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            
+            &:last-child {
+                border-bottom: none;
+            }
+            
+            .teams {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.5rem;
+                
+                .vs {
+                    color: #888;
+                    font-size: 0.8rem;
+                }
+            }
+            
+            .score {
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: var(--text-color);
+                text-align: center;
+                margin-bottom: 0.25rem;
+            }
+            
+            .status {
+                text-align: center;
+                font-size: 0.8rem;
+                color: #666;
+                
+                &.live {
+                    color: #e74c3c;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .standings-table {
+        .standings-row {
+            display: grid;
+            grid-template-columns: 30px 1fr 40px;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            
+            &:last-child {
+                border-bottom: none;
+            }
+            
+            .position {
+                font-weight: 700;
+                color: var(--primary-color);
+            }
+            
+            .team {
+                color: var(--text-color);
+            }
+            
+            .points {
+                font-weight: 600;
+                text-align: right;
+            }
+        }
+    }
+
+    .upcoming-matches, .political-agenda {
+        .match-preview, .agenda-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            
+            &:last-child {
+                border-bottom: none;
+            }
+            
+            .match-date, .agenda-date {
+                color: var(--primary-color);
+                font-weight: 600;
+                font-size: 0.85rem;
+                margin-bottom: 0.25rem;
+            }
+            
+            .match-teams {
+                color: var(--text-color);
+                font-weight: 600;
+                margin-bottom: 0.25rem;
+            }
+            
+            .match-competition {
+                color: #666;
+                font-size: 0.85rem;
+            }
+        }
+        
+        .agenda-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            
+            .agenda-date {
+                background: var(--primary-color);
+                color: white;
+                padding: 0.5rem;
+                border-radius: 8px;
+                font-weight: 600;
+                font-size: 0.8rem;
+                text-align: center;
+                min-width: 50px;
+                margin-bottom: 0;
+            }
+            
+            .agenda-info {
+                h4 {
+                    color: var(--text-color);
+                    margin-bottom: 0.25rem;
+                    font-size: 0.95rem;
+                }
+                
+                p {
+                    color: #666;
+                    font-size: 0.85rem;
+                }
+            }
+        }
+    }
+
+    // Politics specific styles
+    .polls {
+        .poll-item {
+            margin-bottom: 1rem;
+            
+            .party-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.5rem;
+                
+                .party-name {
+                    font-weight: 600;
+                    color: var(--text-color);
+                }
+                
+                .poll-percentage {
+                    font-weight: 700;
+                    color: var(--primary-color);
+                }
+            }
+            
+            .poll-bar {
+                height: 8px;
+                background: #eee;
+                border-radius: 4px;
+                overflow: hidden;
+                
+                .poll-fill {
+                    height: 100%;
+                    transition: width 0.3s ease;
+                }
+            }
+        }
+    }
+
+    .analysis-list {
+        .analysis-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            
+            &:last-child {
+                border-bottom: none;
+            }
+            
+            h4 {
+                margin-bottom: 0.5rem;
+                
+                a {
+                    color: var(--text-color);
+                    text-decoration: none;
+                    font-size: 0.95rem;
+                    
+                    &:hover {
+                        color: var(--primary-color);
+                    }
+                }
+            }
+            
+            p {
+                color: #666;
+                font-size: 0.85rem;
+                margin-bottom: 0.25rem;
+            }
+            
+            .author {
+                color: #888;
+                font-size: 0.8rem;
+                font-style: italic;
+            }
+        }
+    }
+
+    // Footer styles
+    .footer {
+        background: var(--text-color);
+        color: white;
+        margin-top: 4rem;
+        
+        .footer-content {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 3rem 1rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            
+            .footer-section {
+                h3, h4 {
+                    color: white;
+                    margin-bottom: 1rem;
+                }
+                
+                p {
+                    color: #ccc;
+                    line-height: 1.6;
+                    margin-bottom: 0.5rem;
+                }
+                
+                ul {
+                    list-style: none;
+                    
+                    li {
+                        margin-bottom: 0.5rem;
+                        
+                        a {
+                            color: #ccc;
+                            text-decoration: none;
+                            transition: color 0.2s ease;
+                            
+                            &:hover {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding: 1rem;
+            text-align: center;
+            
+            p {
+                color: #ccc;
+                font-size: 0.9rem;
+                max-width: 80rem;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    // Navigation active state
+    .links a.active {
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+
+    // Responsive design
+    @media (max-width: 768px) {
+        .navbar .nav-container {
+            flex-direction: column;
+            gap: 1rem;
+            
+            .links {
+                gap: 1rem;
+            }
+        }
+        
+        .thumbline {
+            padding-top: 6rem;
+            
+            h2.title {
+                font-size: 2rem;
+            }
+            
+            p.subtitles {
+                font-size: 1.1rem;
+            }
+        }
+        
+        .page-header .header-content h1 {
+            font-size: 2rem;
+        }
+        
+        .news-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .breaking-news {
+            flex-direction: column;
+            height: auto;
+            padding: 1rem;
+            
+            h2 {
+                margin-bottom: 0.5rem;
+                margin-right: 0;
+            }
+        }
+    }
 }
 
 * {

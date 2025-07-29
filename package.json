@@ -6,7 +6,10 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "sass": "sass --watch ./estilos.scss:./estilos.css",
-        "start": "serve -s ./"
+        "start": "serve -s ./",
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
     },
     "repository": {
         "type": "git",

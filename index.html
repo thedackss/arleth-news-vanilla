@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Power News Times</title>
         <link rel="stylesheet" href="estilos.css" />
+        <script src="js/main.js" defer></script>
     </head>
     <body>
         <nav class="navbar">
@@ -37,10 +38,10 @@
 
                 <div class="links">
                     <a href="/">Inicio</a>
-                    <a href="/global">Global</a>
-                    <a href="/tecnologia">Técnologia</a>
-                    <a href="/deportes">Deportes</a>
-                    <a href="/politica">Politica</a>
+                    <a href="global.html">Global</a>
+                    <a href="tecnologia.html">Tecnología</a>
+                    <a href="deportes.html">Deportes</a>
+                    <a href="politica.html">Política</a>
                 </div>
             </div>
         </nav>
@@ -64,16 +65,16 @@
                 <h2>Últimas Noticias</h2>
                 <ul>
                     <li>
-                        <a href="/noticia/1">Titular de la noticia 1</a>
+                        <a href="#">Elecciones presidenciales: Resultados preliminares muestran empate técnico</a>
                     </li>
                     <li>
-                        <a href="/noticia/2">Titular de la noticia 2</a>
+                        <a href="#">Nueva tecnología de IA revoluciona el sector médico</a>
                     </li>
                     <li>
-                        <a href="/noticia/3">Titular de la noticia 3</a>
+                        <a href="#">Mundial de Fútbol: España clasifica a semifinales</a>
                     </li>
                     <li>
-                        <a href="/noticia/4">Titular de la noticia 4</a>
+                        <a href="#">Crisis económica global: Mercados asiáticos en caída libre</a>
                     </li>
                 </ul>
             </div>
@@ -82,6 +83,89 @@
             <p class="subtitles">
                 Tu fuente de noticias confiables y actualizadas.
             </p>
+            
+            <div class="main-content">
+                <section class="featured-news">
+                    <h2>Noticias Destacadas</h2>
+                    <div class="news-grid">
+                        <article class="news-card featured">
+                            <img src="https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Noticia principal">
+                            <div class="news-content">
+                                <span class="category">Política</span>
+                                <h3>Cumbre Internacional Aborda Crisis Climática Global</h3>
+                                <p>Líderes mundiales se reúnen para discutir medidas urgentes contra el cambio climático y establecer nuevos compromisos ambientales.</p>
+                                <div class="news-meta">
+                                    <span class="date">Hace 2 horas</span>
+                                    <span class="author">Por María González</span>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="news-card">
+                            <img src="https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tecnología">
+                            <div class="news-content">
+                                <span class="category">Tecnología</span>
+                                <h3>Inteligencia Artificial Transforma la Medicina</h3>
+                                <p>Nuevos algoritmos permiten diagnósticos más precisos y tratamientos personalizados.</p>
+                                <div class="news-meta">
+                                    <span class="date">Hace 4 horas</span>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="news-card">
+                            <img src="https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Deportes">
+                            <div class="news-content">
+                                <span class="category">Deportes</span>
+                                <h3>Copa Mundial: España Avanza a Semifinales</h3>
+                                <p>La selección española derrota 3-1 a Brasil en un emocionante encuentro.</p>
+                                <div class="news-meta">
+                                    <span class="date">Hace 6 horas</span>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="news-card">
+                            <img src="https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Economía">
+                            <div class="news-content">
+                                <span class="category">Global</span>
+                                <h3>Mercados Financieros Muestran Volatilidad</h3>
+                                <p>Incertidumbre económica global afecta las principales bolsas de valores.</p>
+                                <div class="news-meta">
+                                    <span class="date">Hace 8 horas</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
         </div>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Power News Times</h3>
+                    <p>Tu fuente confiable de noticias actualizadas las 24 horas del día.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Secciones</h4>
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="global.html">Global</a></li>
+                        <li><a href="tecnologia.html">Tecnología</a></li>
+                        <li><a href="deportes.html">Deportes</a></li>
+                        <li><a href="politica.html">Política</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Email: info@powernewstimes.com</p>
+                    <p>Teléfono: +34 900 123 456</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Power News Times. Todos los derechos reservados.</p>
+            </div>
+        </footer>
     </body>
 </html>
