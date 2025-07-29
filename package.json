@@ -1,0 +1,27 @@
+{
+    "name": "arleth-news-vanilla",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sass": "sass --watch ./estilos.scss:./estilos.css",
+        "start": "serve -s ./"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thedackss/arleth-news-vanilla.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/thedackss/arleth-news-vanilla/issues"
+    },
+    "homepage": "https://github.com/thedackss/arleth-news-vanilla#readme",
+    "devDependencies": {
+        "sass": "^1.89.2",
+        "serve": "^14.2.4"
+    }
+}
