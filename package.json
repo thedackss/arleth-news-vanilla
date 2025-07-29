@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "sass": "sass --watch ./estilos.scss:./estilos.css",
-        "start": "serve -s ./src"
+        "start": "http-server ./src"
     },
     "repository": {
         "type": "git",
@@ -21,7 +21,9 @@
     },
     "homepage": "https://github.com/thedackss/arleth-news-vanilla#readme",
     "devDependencies": {
-        "sass": "^1.89.2",
-        "serve": "^14.2.4"
+        "sass": "^1.89.2"
+    },
+    "dependencies": {
+        "http-server": "^14.1.1"
     }
 }
